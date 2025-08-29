@@ -1,0 +1,17 @@
+[
+    {
+        "icon": "MdPlace",
+        "title": "Find us",
+        "details": "Jamshedpur, Jharkhand" 
+    },
+    {
+        "icon": "IoCallSharp",
+       "title": "Call us",
+       "details": "+919304746866" 
+    },
+    {
+        "icon": "TbMailPlus",
+        "title": "EMail us",
+        "details": "sumitacharya05@gamil.com" 
+    }   
+]
