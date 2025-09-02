@@ -16,19 +16,14 @@ export const Doctor = () => {
 
       <div className="doctor-container">
         <form onSubmit={handleFormSubmit}>
-          <input
-            type="text" className="form-control"
-            placeholder="Enter Your Name"  name="username"
-            required autoComplete="off"
-          />
+          <input type="text" className="form-control"placeholder="Enter Your Name" name="username"
+             required autoComplete="off"/>
 
-          <input type="email"className="form-control" placeholder="Enter Your Email"
-            name="email"  required autoComplete="off" />
+          <input type="email"className="form-control" placeholder="Enter Your Email" name="email"
+             required autoComplete="off" />
 
-          <input
-            type="tel" className="form-control" placeholder="Enter Your Phone"  name="phone"
-            required autoComplete="off"
-          />
+          <input type="tel" className="form-control" placeholder="Enter Your Phone"  name="phone"
+            required autoComplete="off"/>
 
           <select className="form-control" name="doctor" required>
             <option value="">Select Doctor</option>
@@ -45,13 +40,10 @@ export const Doctor = () => {
 
           <input type="time" className="form-control" name="time" required />
 
-          <textarea
-            className="form-control"  rows="5"
-            placeholder="Describe Your Health Issue"
-            name="message"  required autoComplete="off"
-          ></textarea>
+          <textarea className="form-control"  rows="5"
+            placeholder="Describe Your Health Issue" name="message" required autoComplete="off"></textarea>
 
-          <button type="submit">Book Appointment</button>
+          <button type="submit"> Book Appointment </button>
         </form>
       </div>
       </div>
