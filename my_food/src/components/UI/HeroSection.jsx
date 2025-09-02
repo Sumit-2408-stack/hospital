@@ -5,10 +5,10 @@ export const HeroSection = () => {
         <main className="hero-section main"> 
                 <div className="container grid grid-two-cols">
                     <div className="hero-content">
-                    <h1 className="heading-xl">
+                    <h3 className="heading-xl">
                         View details about doctor,
                          one at a time.
-                    </h1>
+                    </h3>
                     <p className="paragraph">
                         We have a team of experienced doctors decicated to
                          patient health, safety, and well-being.

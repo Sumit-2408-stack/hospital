@@ -1,49 +1,53 @@
-*{
+/* Reset default browser styles */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-:root {
-  --bg-color:#202020;
 
+/* Root variables for theme colors */
+:root {
+  --bg-color: #202020;
 }
+
+/* Global styles */
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; /* makes 1rem = 10px (easy scaling) */
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
 body {
-  background-color:aqua;
+  background-color: aqua;
 }
 
-
-h1,
-h2,
-h3,
-h4,
-h5 {
+/* Headings styling */
+h1, h2, h3, h4, h5 {
   color: blueviolet;
- }
+}
 
- p,
- li,
- a,
- button {
+/* Text elements */
+p, li, a {
   font-size: 1.7rem;
   letter-spacing: 0.1rem;
   line-height: 1.6;
   color: blue;
- }
- li{
-  list-style: none;
- }
- a {
-  color: #000;
- }
- :hover {
-  color: brown;
- }
+}
 
- button{
+li {
+  list-style: none;
+}
+
+a {
+  color: #000;
+}
+
+/* Hover effect (applies globally to all elements if hoverable) */
+:hover {
+  color: brown;
+}
+
+/* General button style */
+button {
   display: flex;
   gap: 1.2rem;
   align-items: center;
@@ -60,83 +64,108 @@ h5 {
   background: local;
   color: cadetblue;
   border-radius: 1.5rem;
+}
 
- }
-
- .container {
+/* Generic container for centering */
+.container {
   max-width: 80rem;
-  margin :auto;
- }
- .grid {
+  margin: auto;
+}
+
+/* Grid utilities */
+.grid {
   display: grid;
- }
- .grid-two-cols {
-  display : grid;
-  grid-template-columns : repeat (2,1fr);
+}
+
+.grid-two-cols {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 2rem;
- }
+}
 
+.grid-three-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
 
- header {
+/* Header styles */
+header {
   box-shadow: 0 2px 8px rgba(211, 101, 101, 0.1);
-  background-color: white;
+  background: linear-gradient(90deg, #7796ec, #f4f0f6);
   padding: 1.5rem 2rem;
- }
- .navbar-grid {
-  display: flex;               /* use flex for navbar */
-  align-items: center;         /* vertically center */
-  justify-content: space-between; /* logo left, nav right */
- }
- nav ul {
+}
+
+/* Navbar layout */
+.navbar-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
   display: flex;
   gap: 2rem;
- }
+}
 
-
- .hero-section.container {
+/* Hero section */
+.hero-section.container {
   padding: 3rem;
   margin: 7rem auto;
-  gap : 5rem;
+  gap: 5rem;
+}
 
- }
- .paragraph{
-  margin:3rem;
- }
- 
- .heading-xl {
+.paragraph {
+  margin: 3rem;
+}
+
+.heading-xl {
   font-family: Arial, Helvetica, sans-serif;
   font-size: clamp(4rem, 6vw, 5.2rem);
   font-weight: 600;
-  line-height: 1.15;
+  padding: 2rem;
+  margin: 1rem;
+  line-height: 1;
   letter-spacing: -1px;
- }
+}
 
- .hero-image {
+/* Hero image center */
+.hero-image {
   display: flex;
   justify-content: center;
   align-items: center;
- }
- .container .hospital-image {
-  width: 100%;
- }
- @media screen and (max-width:900px){
+}
 
-  .hero-content{
+.container .hospital-image {
+  width: 100%;
+  max-width: 500px;
+  height: 50vh;
+  margin: 1rem;
+  padding: 1.6rem;
+}
+
+/* Responsive design for hero section */
+@media screen and (max-width: 900px) {
+  .hero-content {
     order: 1;
   }
-  .hospital-image{
-   max-width:100%;
+
+  .hospital-image {
+    max-width: 100%;
   }
 
   .container .hospital-image {
-    width:80%;
-    order:0;
+    width: 80%;
+    order: 0;
   }
- }
- .gradient-cards {
+}
+
+/* Gradient card section */
+.gradient-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -147,6 +176,9 @@ h5 {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   padding: 2rem;
   transition: transform 0.2s ease-in-out;
+  max-width: 55rem;
+  width: 100%;
+  margin-inline: auto;
 }
 
 .card:hover {
@@ -172,12 +204,13 @@ h5 {
   color: #333;
 }
 
+/* Section title */
 .container-title {
-  text-align: center;       /* center align */
-  font-size: 3rem;          /* make it bigger (try 3rem ~ 48px) */
-  font-weight: bold;        /* make it bolder */
-  margin-bottom: 2rem;      /* add space below */
-  color: blueviolet;       /* matches your theme */ 
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: blueviolet;
   padding: 0 !important;
 }
 
@@ -185,25 +218,14 @@ h5 {
   margin: 0 auto 9rem auto;
 }
 
-.gradient-cards {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap:3.2rem;
-}
-
-@media screen and (max-width : 991px) {
-  .gradient-cards{
+/* Responsive for cards */
+@media screen and (max-width: 991px) {
+  .gradient-cards {
     grid-template-columns: 1fr;
   }
 }
-.card {
-  max-width: 55rem;
-  border: 0;
-  width: 100%;
-  margin-inline: auto;
-}
 
-/* from google for select color*/
+/* Colored box background outline effect */
 .bg-green-box, 
 .bg-yellow-box,
 .bg-white-box,
@@ -214,35 +236,30 @@ h5 {
 .bg-green-box::after,
 .bg-yellow-box::after,
 .bg-white-box::after,
-.bg-red-box::after{
+.bg-red-box::after {
   position: absolute;
   top: -1px;
   bottom: -1px;
   left: -1px;
   right: -1px;
-  content:"";
+  content: "";
   z-index: -1;
   border-radius: 45px;
 }
+
+/* Contact section */
 .section-contact {
   display: flex;
-  justify-content: center;   /* center horizontally */
-  align-items: center;       /* center vertically */
-  flex-direction: column;    /* stack heading + form */
-  min-height: 50vh;          /* give full screen height */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 50vh;
   padding: 1rem;
-}
-
-.container-title {
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
 }
 
 .contact-container {
   width: 100%;
-  max-width: 500px;          /* fixed width for form */
+  max-width: 500px;
   background: #fff;
   padding: 2rem;
   border-radius: 1rem;
@@ -252,7 +269,7 @@ h5 {
 form {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;               /* space between inputs */
+  gap: 1.5rem;
 }
 
 .form-control {
@@ -262,6 +279,7 @@ form {
   border: 1px solid #ccc;
   border-radius: 0.8rem;
   outline: none;
+  transition: 0.3s ease;
 }
 
 .form-control:focus {
@@ -269,6 +287,7 @@ form {
   box-shadow: 0 0 4px rgba(138, 43, 226, 0.5);
 }
 
+/* Button (Contact form) */
 button {
   padding: 1rem;
   font-size: 1.6rem;
@@ -284,25 +303,20 @@ button:hover {
   background: darkviolet;
 }
 
-.grid-three-cols {
-  display : grid;
-  grid-template-columns : repeat (3,1fr);
-  align-items: center;
-  gap: 2rem;
- }
- .footer-section {
-  background: #202020;   /* dark background */
-  color: white;          /* text color */
+/* Footer */
+.footer-section {
+  background: #202020;
+  color: white;
   padding: 1.5rem 0;
   text-align: center;
 }
 
 .footer-container {
   display: flex;
-  justify-content: center; /* center horizontally */
+  justify-content: center;
   align-items: center;
-  gap: 3rem;               /* spacing between items */
-  flex-wrap: wrap;         /* responsive wrap on small screens */
+  gap: 3rem;
+  flex-wrap: wrap;
 }
 
 .footer-container p {
@@ -310,10 +324,54 @@ button:hover {
   font-size: 1.6rem;
   display: flex;
   align-items: center;
-  gap: 0.5rem;  /* space between icon and text */
+  gap: 0.5rem;
 }
 
 .footer-container .icon {
   font-size: 2rem;
-  color: #ffcc00; /* icon color */
+  color: #ffcc00;
+}
+
+/* Doctor Page */
+.doctor-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 10px;
+  background: #2980b9;
+}
+
+.doctor-container {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 150%;
+}
+
+.container-heading {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  color: #01020e;
+  margin-bottom: 20px;
+}
+
+/* Doctor page button */
+.doctor-container button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #3498db;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.doctor-container button:hover {
+  background: #2980b9;
 }
