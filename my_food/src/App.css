@@ -338,15 +338,6 @@ button:hover {
 }
 
 /* Doctor Page */
-.doctor-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 80vh;
-  padding: 10px;
-  background: #2980b9;
-}
-
 .doctor-container {
   background: #fff;
   padding: 20px 30px;
@@ -354,15 +345,6 @@ button:hover {
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
   max-width: 500px;
   width: 150%;
-}
-
-.container-heading {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  font-size: 2rem;
-  color: #01020e;
-  margin-bottom: 20px;
 }
 
 /* Doctor page button */
@@ -471,5 +453,89 @@ button:hover {
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.9); }
   to { opacity: 1; transform: scale(1); }
+}
+
+/* doctor page upadte */
+.doctor-section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px;
+}
+
+.container-heading {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+/* Two parallel divs */
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.info-card {
+  flex: 1;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Register form below */
+.form-card {
+  margin: auto;
+  max-width: 500px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+}
+
+.form-card form input,
+.form-card form select,
+.form-card form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.form-card button {
+  width: 100%;
+  padding: 12px;
+  background: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.form-card button:hover {
+  background: #2980b9;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  width: 400px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
 }
 
